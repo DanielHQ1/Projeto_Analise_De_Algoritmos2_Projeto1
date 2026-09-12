@@ -1,0 +1,47 @@
+Projeto: Backup offline do professor Leonardo
+Disciplina: Projeto e Analise de Algoritmos II
+
+INTEGRANTES DO GRUPO
+- Nome completo: Daniel Henrique Carvalho
+  RA: 10736657
+- Nome completo: Felipe Sousa Vasques Honorato
+  RA: 10735577
+
+
+VIDEO NO YOUTUBE
+Link: PREENCHER APOS GRAVAR O VIDEO (duracao exigida: 4 a 7 minutos)
+
+COMO COMPILAR
+gcc -std=c11 -Wall -Wextra -Wpedantic backup.c -o backup
+
+COMO EXECUTAR
+Linux/macOS:
+./backup
+
+Windows (Prompt de Comando):
+backup.exe
+
+O programa nao recebe argumentos. Ele le o arquivo "arquivo de entrada.txt" e
+grava o resultado em "arquivo de saida.txt", ambos na pasta em que o executavel
+for iniciado. A entrada contem N casos de teste. Cada caso informa a capacidade
+total dos dois pendrives (L), a quantidade de arquivos (T <= 50) e os tamanhos
+dos arquivos, em GB. Os dois pendrives possuem capacidade L/2.
+
+TECNICA DE PROJETO UTILIZADA
+Foi utilizado backtracking. A funcao recursiva analisa um arquivo por vez e
+tenta coloca-lo no Pendrive A ou no Pendrive B. Quando uma tentativa ultrapassa
+a capacidade de um pendrive, ela e interrompida. Os arquivos sao ordenados do
+maior para o menor antes da busca, e o programa tenta primeiro o pendrive menos
+ocupado. Essas podas reduzem a quantidade de combinacoes analisadas.
+
+Quando encontra distribuicoes validas, o programa guarda aquela cuja diferenca
+entre o espaco usado nos dois pendrives e menor. A complexidade no pior caso e
+O(2^T), pois cada arquivo pode ser colocado em um de dois pendrives. A memoria
+usada pelos vetores e O(T), em que T e a quantidade de arquivos.
+
+A TECNICA UTILIZADA SEMPRE APRESENTA O MELHOR RESULTADO?
+O backtracking encontra uma combinacao valida quando ela existe, pois explora as
+duas possibilidades para cada arquivo. Porem, ele nao e sempre a tecnica mais
+rapida: no pior caso, o numero de combinacoes cresce exponencialmente. As podas
+e a ordenacao diminuem esse custo em muitos casos, mas para entradas muito
+grandes outras tecnicas podem ser mais adequadas.
