@@ -1,5 +1,9 @@
 /* Projeto: Backup offline. Preencha os integrantes antes da entrega. */
-
+//INTEGRANTES DO GRUPO
+//- Nome completo: Daniel Henrique Carvalho
+// RA: 10736657
+//- Nome completo: Felipe Sousa Vasques Honorato
+// RA: 10735577
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
