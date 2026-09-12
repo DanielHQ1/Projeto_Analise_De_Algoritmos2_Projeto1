@@ -9,7 +9,7 @@ INTEGRANTES DO GRUPO
 
 
 VIDEO NO YOUTUBE
-Link: PREENCHER APOS GRAVAR O VIDEO (duracao exigida: 4 a 7 minutos)
+Link: https://youtu.be/T_RUP_eaDT8
 
 COMO COMPILAR
 gcc -std=c11 -Wall -Wextra -Wpedantic backup.c -o backup
@@ -22,7 +22,7 @@ Windows (Prompt de Comando):
 backup.exe
 
 O programa nao recebe argumentos. Ele le o arquivo "arquivo de entrada.txt" e
-grava o resultado em "arquivo de saida.txt", ambos na pasta em que o executavel
+gera o arquivo de saida: "arquivo de saida.txt", ambos na pasta em que o executavel
 for iniciado. A entrada contem N casos de teste. Cada caso informa a capacidade
 total dos dois pendrives (L), a quantidade de arquivos (T <= 50) e os tamanhos
 dos arquivos, em GB. Os dois pendrives possuem capacidade L/2.
